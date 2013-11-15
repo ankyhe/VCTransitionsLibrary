@@ -15,4 +15,6 @@
 
 @property (nonatomic) NSUInteger folds;
 
+@property (nonatomic, assign) BOOL fromRight;
+
 @end

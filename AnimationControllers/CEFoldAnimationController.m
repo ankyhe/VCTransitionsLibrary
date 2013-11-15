@@ -13,8 +13,19 @@
 - (id)init {
     if (self = [super init]) {
         self.folds = 2;
+        self.fromRight = YES;
     }
     return self;
+}
+
+#pragma mark - Override Methods
+- (BOOL)reverse
+{
+    if (self.fromRight) {
+        return ! [super reverse];
+    } else {
+        return [super reverse];
+    }
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext fromVC:(UIViewController *)fromVC toVC:(UIViewController *)toVC fromView:(UIView *)fromView toView:(UIView *)toView {
